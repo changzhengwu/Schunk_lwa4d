@@ -6,7 +6,11 @@ you should also install the package schunk_robots , schunk_modular_robotics , at
 installation:
 
 cd 
+
 git clone https://github.com/changzhengwu/schunk_lwa4d.git
+
 cd schunk_lwa4d
+
 rosinstall .travis.rosinstall
+
 source ~/.bashrc
