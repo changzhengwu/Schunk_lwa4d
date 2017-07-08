@@ -4,9 +4,9 @@ schunk_lwa4d manipulator with ati_force_torque and pg70
 you should also install the package schunk_robots , schunk_modular_robotics , ati_force_torque ,etc
 
 # installation:
-
+'''
 cd 
-
+'''
 git clone https://github.com/changzhengwu/schunk_lwa4d.git
 
 cd schunk_lwa4d
