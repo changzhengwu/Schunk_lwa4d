@@ -1,0 +1,19 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: schunk_lwa4d_ati_pg/arm_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - arm_1_joint
+      - arm_2_joint
+      - arm_3_joint
+      - arm_4_joint
+      - arm_5_joint
+      - arm_6_joint
+      - arm_7_joint
+  - name: schunk_lwa4d_ati_pg/gripper_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - pg70_finger_left_joint
+

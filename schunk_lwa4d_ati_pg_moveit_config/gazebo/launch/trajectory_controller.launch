@@ -1,0 +1,6 @@
+<launch>
+<rosparam file="$(find schunk_lwa4d_ati_pg_moveit_config)/gazebo/config/trajectory_control.yaml" command="load"/>
+
+  <node name="schunk_lwa4d_ati_pg_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/schunk_lwa4d_ati_pg" args="arm_joint_trajectory_controller
+                                                                                                                                                              gripper_joint_trajectory_controller"/>
+</launch>

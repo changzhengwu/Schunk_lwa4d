@@ -1,0 +1,26 @@
+
+<launch>
+  <include file="$(find schunk_lwa4d_ati_pg_moveit_config)/gazebo/launch/robot_world.launch" />
+  <include file="$(find schunk_lwa4d_ati_pg_moveit_config)/gazebo/launch/joint_states.launch" />
+  <include file="$(find schunk_lwa4d_ati_pg_moveit_config)/gazebo/launch/trajectory_controller.launch" />
+
+
+
+  <include file="$(find schunk_lwa4d_ati_pg_moveit_config)/launch/move_group.launch">
+   <arg name="publish_monitored_planning_scene" value="true" />
+   <arg name="allow_trajectory_execution" value="true"/>
+  </include>
+
+  # The visualization component of MoveIt!
+  <include file="$(find schunk_lwa4d_ati_pg_moveit_config)/launch/moveit_rviz.launch" />
+
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[schunk_lwa4d_ati_pg/joint_states]</rosparam>
+  </node>
+
+
+
+</launch>
+
